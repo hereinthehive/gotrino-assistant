@@ -1,0 +1,17 @@
+{
+  "name": "Gotrino",
+  "owner": {
+    "name": "Dan Donald",
+    "email": "dan@gotrino.com"
+  },
+  "plugins": [
+    {
+      "name": "gotrino-inclusion",
+      "source": {
+        "source": "github",
+        "repo": "hereinthehive/gotrino-inclusion"
+      },
+      "description": "Review code for inclusive design, accessibility, and ethical considerations"
+    }
+  ]
+}
