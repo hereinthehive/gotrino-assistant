@@ -1,13 +1,13 @@
 ---
 name: teach-charter
-description: Set up the inclusion plugin for your project. Detects your stack, captures scope decisions, and creates a config that evolves with your project. Run once to get started, revisit to update decisions.
+description: Set up the Gotrino assistant for your project. Detects your stack, captures scope decisions, and creates a config that evolves with your project. Run once to get started, revisit to update decisions.
 allowed-tools: Read, Grep, Glob, Write, AskUserQuestion
 user-invocable: true
 ---
 
 # Teach Charter (Setup & Configuration)
 
-Help users set up the inclusion plugin for their project, capturing context and scope decisions that reduce noise over time.
+Help users set up the Gotrino assistant for their project, capturing context and scope decisions that reduce noise over time.
 
 ## Philosophy
 
@@ -54,6 +54,34 @@ Show what was detected and let user correct:
 | Test location | src/__tests__/ | |
 | Docs location | docs/ | |
 | Decisions location | decisions/ | |
+| Task management | None detected | |
+```
+
+### 2b. Capture Task Management
+
+Ask where and how tasks are tracked:
+
+```markdown
+### Task Management
+
+**Where do you track tasks?**
+- [ ] Linear
+- [ ] GitHub Issues
+- [ ] Jira
+- [ ] Local files (e.g. `tasks/`, `TODO.md`)
+- [ ] Other: ___
+- [ ] None / ad hoc
+
+**Is the tracker accessible to Claude via tools?**
+- [ ] Yes (e.g. Linear MCP, GitHub CLI)
+- [ ] No — read-only / manual
+- [ ] Not sure
+
+**Where should code-adjacent tasks go?**
+(Quick tasks for the current session, not full issues)
+- [ ] Local task files in: ___
+- [ ] Just mention them in conversation
+- [ ] Same tracker as above
 ```
 
 ### 3. Capture Scope Decisions
@@ -124,6 +152,20 @@ Last updated: [date]
 | Test location | src/__tests__/ |
 | Docs location | docs/ |
 | Decisions location | decisions/ |
+| Task management | Linear (accessible via MCP) |
+| Local task location | tasks/todo/ |
+
+---
+
+## Task Management
+
+| Setting | Value |
+|---------|-------|
+| Tracker | Linear |
+| Accessible via tools | Yes (Linear MCP) |
+| Local tasks | tasks/todo/ |
+
+When triaging work, create issues in the tracker if it's accessible. Otherwise, report the recommendation and let the user create the issue manually. Code-adjacent tasks go to the local task location.
 
 ---
 
@@ -218,14 +260,14 @@ Config saved to `.inclusion-config.md`
 
 Based on your priorities:
 
-1. `/gotrino-inclusion:language-check src/`
-2. `/gotrino-inclusion:names-check src/__tests__/`
-3. `/gotrino-inclusion:inclusion-audit src/components/forms/`
+1. `/gotrino-assistant:language-check src/`
+2. `/gotrino-assistant:names-check src/__tests__/`
+3. `/gotrino-assistant:inclusion-audit src/components/forms/`
 
 ### Revisit In
 
 Your scope decisions will be reviewed in 6 months (2024-07-15).
-Run `/gotrino-inclusion:teach-charter` again to update anytime.
+Run `/gotrino-assistant:teach-charter` again to update anytime.
 ```
 
 ## Updating Existing Config

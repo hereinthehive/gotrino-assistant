@@ -1,6 +1,6 @@
 {
-  "name": "gotrino-inclusion",
-  "description": "Review code for inclusive design, accessibility, and ethical considerations",
+  "name": "gotrino-assistant",
+  "description": "A development assistant with skills for inclusion, triage, impact analysis, and more",
   "version": "0.1.0",
   "author": {
     "name": "Dan Donald",

@@ -1,20 +1,20 @@
 ---
 name: plugin-help
-description: Show available commands and explain how to use the Gotrino inclusion plugin.
+description: Show available commands and explain how to use the Gotrino assistant.
 allowed-tools: Read, Glob
 user-invocable: true
 ---
 
 # Plugin Help
 
-Show available commands and explain how to use the Gotrino inclusion plugin.
+Show available commands and explain how to use the Gotrino assistant.
 
 ## Output
 
 ```markdown
-# Gotrino - Inclusion Plugin
+# Gotrino Assistant
 
-Tools to help you write more inclusive code.
+A development assistant with skills for inclusion, triage, impact analysis, and more.
 
 ## Quick Reference
 
@@ -74,7 +74,7 @@ Run `/teach-charter` to create or update this file.
 
 ## Philosophy
 
-This plugin isn't a linter. It's a **second pair of eyes** that asks:
+This assistant isn't a linter. It's a **second pair of eyes** that asks:
 
 > "Who might this exclude? What assumptions are baked in?"
 

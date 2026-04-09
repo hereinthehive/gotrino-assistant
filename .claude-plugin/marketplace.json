@@ -6,12 +6,12 @@
   },
   "plugins": [
     {
-      "name": "gotrino-inclusion",
+      "name": "gotrino-assistant",
       "source": {
         "source": "github",
-        "repo": "hereinthehive/gotrino-inclusion"
+        "repo": "hereinthehive/gotrino-assistant"
       },
-      "description": "Review code for inclusive design, accessibility, and ethical considerations"
+      "description": "A development assistant with skills for inclusion, triage, impact analysis, and more"
     }
   ]
 }

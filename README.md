@@ -1,6 +1,6 @@
-# Gotrino - Inclusion Plugin
+# Gotrino Assistant
 
-A Claude Code plugin for reviewing code with an inclusion lens.
+A Claude Code plugin for development assistance — inclusion reviews, task triage, impact analysis, and more.
 
 ## What It Does
 
@@ -40,12 +40,17 @@ It's not a linter. It's a second pair of eyes that sees your code from the persp
 | `/inclusion-audit [path]` | Comprehensive inclusion review |
 | `/test-assumption [path]` | Identify hidden assumptions about users |
 
+### Triage & Planning
+| Command | What it does |
+|---------|--------------|
+| `/triage` | Assess a request, prioritise it, and draft a ready-to-file issue |
+| `/impact [path]` | Analyze change impact before making it |
+
 ### Utilities
 | Command | What it does |
 |---------|--------------|
 | `/inclusive-names` | Generate diverse names for mock data |
 | `/explain [path]` | Create decision record in `decisions/` |
-| `/impact [path]` | Analyze change impact before making it |
 
 ### Setup
 | Command | What it does |
@@ -61,6 +66,7 @@ Run `/teach-charter` to create `.inclusion-config.md` in your project root. This
 - **Acknowledged findings**: Issues you've reviewed and accepted as intentional
 - **Priorities**: What matters most for your team
 - **Project context**: Where your tests, docs, and decisions live
+- **Task management**: Where you track work (Linear, GitHub Issues, Jira, local files, etc.) and whether it's accessible via tools
 
 Once configured, the plugin respects your decisions and won't nag you about acknowledged issues.
 
@@ -76,6 +82,27 @@ Guardian: "⚠️ Binary gender field excludes non-binary users"
 You: "That's intentional - we need it for legal compliance"
 Guardian: "Added to config with rationale. Won't flag again."
 ```
+
+### Triage Workflow
+
+```
+You: "Users are reporting the date picker doesn't work in dd/mm/yyyy locales"
+
+You: "/triage"
+Triage: 
+  Type: Bug | Impact: High | Effort: Small | Priority: P2
+  Recommendation: Schedule
+
+  --- Ready-to-file issue ---
+  Title: Fix: date picker rejects dd/mm/yyyy input
+  Description: ...
+  Acceptance criteria:
+  - [ ] Date picker accepts locale-appropriate formats
+  - [ ] Existing mm/dd/yyyy behaviour unchanged
+  Labels: bug, P2, i18n
+```
+
+Paste the issue straight into your tracker, or if the tracker is accessible via tools, it gets created automatically.
 
 ## Typical Workflow
 
@@ -118,6 +145,7 @@ skills/
   teach-charter/        # Project setup & config
   explain/              # Decision documentation
   impact/               # Change impact analysis
+  triage/               # Task triage & issue drafting
   test-assumption/      # Assumption test
   plugin-help/          # Help & command reference
 
