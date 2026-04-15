@@ -7,7 +7,7 @@
     "url": "https://hereinthehive.com"
   },
   "homepage": "https://gotrino.com/resources/inclusion",
-  "repository": "https://github.com/hereinthehive/inclusion",
+  "repository": "https://github.com/hereinthehive/gotrino-assistant",
   "license": "MIT",
   "keywords": ["ethics", "inclusion", "accessibility", "i18n", "diversity", "a11y", "debt", "triage"]
 }
