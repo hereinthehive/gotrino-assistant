@@ -33,12 +33,23 @@ A development assistant with skills for inclusion, triage, impact analysis, and 
 | `/inclusion-audit [path]` | Comprehensive inclusion review |
 | `/test-assumption [path]` | Identify hidden assumptions about users |
 
+### Debt Analysis
+| Command | What it does |
+|---------|--------------|
+| `/code-debt [path]` | TODO markers, dead code, deprecated APIs, oversized units |
+| `/doc-debt [path]` | Stale docs, missing API docs, broken links, undocumented env vars |
+| `/test-debt [path]` | Skipped tests, untested public APIs, flaky patterns |
+| `/dep-debt` | Outdated, unused, or abandoned dependencies |
+| `/design-debt [path]` | Inconsistent patterns, architectural drift, duplicated logic |
+| `/debt-audit [path]` | Run all debt dimensions, synthesize cross-cutting findings |
+
 ### Utilities
 | Command | What it does |
 |---------|--------------|
 | `/inclusive-names` | Generate diverse name suggestions |
 | `/explain [path]` | Create decision record in `decisions/` |
 | `/impact [path]` | Analyze change impact before making it |
+| `/triage` | Triage an incoming request, draft a ready-to-file issue |
 
 ### Setup
 | Command | What it does |
