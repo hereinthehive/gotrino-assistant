@@ -19,7 +19,7 @@ The value of this skill isn't compliance—it's **preserving context** that make
 
 ## Config Integration
 
-Check for `.assistant-config.md` in the project root.
+Follow the migration preflight in `references/config-migration.md`, then check for `.assistant-config.md` in the project root.
 
 **Decisions location** (in order of precedence):
 1. `Decisions location` setting in config
