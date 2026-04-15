@@ -141,12 +141,19 @@ Paste the issue straight into your tracker, or if the tracker is accessible via 
   plugin.json           # Plugin metadata
 
 references/
-  charter-core.md       # Core inclusion principles
-  language-terms.md     # Inclusive language alternatives
-  i18n-checklist.md     # Internationalization checklist
-  diverse-names.md      # Names by region + edge cases
-  assumption-test.md    # Assumption analysis framework
-  examples-checklist.md # Mock data audit checklist
+  charter-core.md           # Core inclusion principles
+  language-terms.md         # Inclusive language alternatives
+  i18n-checklist.md         # Internationalization checklist
+  diverse-names.md          # Names by region + edge cases
+  assumption-test.md        # Assumption analysis framework
+  examples-checklist.md     # Mock data audit checklist
+  config-migration.md       # Shared config migration preflight
+  debt-output-format.md     # Shared format contract for debt skills
+  code-debt-patterns.md     # Code debt signals
+  doc-debt-checklist.md     # Doc debt signals
+  test-debt-patterns.md     # Test debt signals
+  dep-debt-manifests.md     # Dep debt signals
+  design-debt-signals.md    # Design debt signals
 
 skills/
   guardian/             # Quick inclusion check (agent)
@@ -161,6 +168,12 @@ skills/
   impact/               # Change impact analysis
   triage/               # Task triage & issue drafting
   test-assumption/      # Assumption test
+  code-debt/            # Code-level debt surface
+  doc-debt/             # Documentation debt surface
+  test-debt/            # Test-suite debt surface
+  dep-debt/             # Dependency debt surface
+  design-debt/          # Design/architectural drift surface
+  debt-audit/           # Umbrella — runs all debt dimensions
   plugin-help/          # Help & command reference
 
 agents/

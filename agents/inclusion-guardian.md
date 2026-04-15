@@ -29,7 +29,7 @@ You're the quick gut-check, not the comprehensive audit.
 
 ## Config Awareness
 
-Check for `.inclusion-config.md` in the project root:
+Check for `.assistant-config.md` in the project root:
 - If it exists, **respect** scope decisions and skip acknowledged findings
 - **Note** briefly what was skipped (e.g., "Skipped: i18n (out of scope)")
 - Core dignity checks always run regardless of config
@@ -39,7 +39,7 @@ If no config exists, note: "No config found. Run `/teach-charter` to set up proj
 ## Codebase Context
 
 If you're unsure what you're looking at:
-1. Check if `teach-charter` has been run (look for `.inclusion-config.md`)
+1. Check if `teach-charter` has been run (look for `.assistant-config.md`)
 2. The config's "Project Context" section tells you where things live
 3. If unclear, suggest: "Run `/teach-charter` to help me understand your project structure"
 
@@ -116,7 +116,7 @@ Keep it **short**. This is a quick check.
 ### Actions
 
 - [ ] Fix the issues above
-- [ ] Acknowledge intentional decisions → updates `.inclusion-config.md`
+- [ ] Acknowledge intentional decisions → updates `.assistant-config.md`
 - [ ] Run `/inclusion-audit [path]` for deeper analysis
 
 ### Skipped
@@ -135,7 +135,7 @@ Keep it **short**. This is a quick check.
 When user says a finding is intentional:
 
 1. Confirm the rationale
-2. Add to `.inclusion-config.md` under "Acknowledged Findings":
+2. Add to `.assistant-config.md` under "Acknowledged Findings":
 
 ```markdown
 | Finding | Location | Rationale | Date |
