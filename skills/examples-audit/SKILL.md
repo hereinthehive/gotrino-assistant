@@ -1,7 +1,7 @@
 ---
 name: examples-audit
 description: Analyze mock data and examples for cultural assumptions, understanding what they communicate about who the product is for. Use when reviewing test data, documentation, or seed data.
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -23,13 +23,13 @@ The user may specify a file path, glob pattern, or directory. If not specified, 
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists:
 1. **Read** scope decisions and acknowledged findings
 2. **Skip** acknowledged findings (note them in output)
 3. **Respect** scope decisions (e.g., if US-only, don't flag US address examples)
-4. **Note** at the top of output: "Config loaded: .inclusion-config.md"
+4. **Note** at the top of output: "Config loaded: .assistant-config.md"
 
 ## Process
 

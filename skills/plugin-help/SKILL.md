@@ -1,7 +1,7 @@
 ---
 name: plugin-help
 description: Show available commands and explain how to use the Gotrino assistant.
-allowed-tools: Read, Glob
+allowed-tools: Read, Glob, Bash
 user-invocable: true
 ---
 
@@ -48,7 +48,7 @@ A development assistant with skills for inclusion, triage, impact analysis, and 
 ## Typical Workflow
 
 **Starting a new project:**
-1. Run `/teach-charter` to set up your `.inclusion-config.md`
+1. Run `/teach-charter` to set up your `.assistant-config.md`
 2. Define your scope (US-only? Global? etc.)
 3. Set priorities for your team
 
@@ -63,7 +63,7 @@ A development assistant with skills for inclusion, triage, impact analysis, and 
 
 ## Configuration
 
-Your settings are stored in `.inclusion-config.md`:
+Your settings are stored in `.assistant-config.md`:
 
 - **Scope decisions**: What's in/out of scope (e.g., i18n for US-only products)
 - **Acknowledged findings**: Issues you've reviewed and accepted
@@ -84,5 +84,5 @@ It won't catch everything, and not everything it catches needs fixing. Use judgm
 ## Process
 
 1. Output the help text above
-2. If `.inclusion-config.md` exists, note: "Config loaded. Run `/teach-charter` to view or update."
+2. If `.assistant-config.md` exists, note: "Config loaded. Run `/teach-charter` to view or update."
 3. If no config exists, note: "No config found. Run `/teach-charter` to set up your project."

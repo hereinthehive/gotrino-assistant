@@ -1,7 +1,7 @@
 ---
 name: triage
 description: Validate a task, gauge its impact, and decide what to do with it
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -13,7 +13,7 @@ Triage applies to all incoming work — new feature requests, bug reports, inter
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists, read the **Task Management** section to determine:
 - **Tracker**: Where issues are managed (e.g. Linear, GitHub Issues, Jira)
@@ -135,7 +135,7 @@ Draft the issue using the assessment from Steps 1-4:
 
 ## Step 6: Route the work
 
-Use the task management settings from `.inclusion-config.md` to route appropriately:
+Use the task management settings from `.assistant-config.md` to route appropriately:
 
 - **Tracker accessible** → Create the issue directly using the available tools
 - **Tracker not accessible** → Present the drafted issue for the user to copy into their tracker

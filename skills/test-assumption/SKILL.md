@@ -1,7 +1,7 @@
 ---
 name: test-assumption
 description: Identify hidden assumptions about users in code that could exclude or harm. A focused analysis asking "What am I assuming about the person using this?"
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -23,13 +23,13 @@ The user may specify a file path, glob pattern, or directory. If not specified, 
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists:
 1. **Read** scope decisions and acknowledged findings
 2. **Skip** acknowledged findings (note them in output)
 3. **Respect** scope decisions (e.g., if US-only, certain location assumptions are intentional)
-4. **Note** at the top of output: "Config loaded: .inclusion-config.md"
+4. **Note** at the top of output: "Config loaded: .assistant-config.md"
 
 Core dignity checks always run regardless of config.
 

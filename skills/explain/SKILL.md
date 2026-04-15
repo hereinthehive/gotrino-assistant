@@ -1,7 +1,7 @@
 ---
 name: explain
 description: Document the reasoning behind implementation decisions as markdown files. Creates decision records that future developers can reference.
-allowed-tools: Read, Grep, Glob, Write
+allowed-tools: Read, Grep, Glob, Write, Bash
 user-invocable: true
 ---
 
@@ -19,7 +19,7 @@ The value of this skill isn't compliance—it's **preserving context** that make
 
 ## Config Integration
 
-Check for `.inclusion-config.md` in the project root.
+Check for `.assistant-config.md` in the project root.
 
 **Decisions location** (in order of precedence):
 1. `Decisions location` setting in config

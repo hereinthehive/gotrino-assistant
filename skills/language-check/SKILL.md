@@ -1,7 +1,7 @@
 ---
 name: language-check
 description: Analyze code and documentation for non-inclusive language, understanding context and intent before flagging issues. Use when reviewing code for biased terms, gendered language, or problematic terminology.
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -27,13 +27,13 @@ The user may specify a file path, glob pattern, or directory. If not specified, 
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists:
 1. **Read** scope decisions and acknowledged findings
 2. **Skip** any acknowledged findings (note them in output)
 3. **Respect** priority settings
-4. **Note** at the top of output: "Config loaded: .inclusion-config.md"
+4. **Note** at the top of output: "Config loaded: .assistant-config.md"
 
 If config says certain checks are out of scope, still run language checks (core dignity principles), but respect acknowledged individual findings.
 

@@ -1,7 +1,7 @@
 ---
 name: inclusion-audit
 description: Comprehensive inclusion analysis of code, examining language, internationalization, assumptions, and who might be excluded. Thorough review for releases or major features.
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -25,7 +25,7 @@ The user may specify a file path, glob pattern, or directory. If not specified, 
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists:
 1. **Read** scope decisions, priorities, and acknowledged findings
@@ -34,7 +34,7 @@ If it exists:
 4. **Respect** priorities when ordering recommendations
 5. **Note** at the top of output:
    ```
-   **Config loaded:** .inclusion-config.md
+   **Config loaded:** .assistant-config.md
    **Skipped:** i18n (out of scope), 3 acknowledged findings
    ```
 

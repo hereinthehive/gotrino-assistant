@@ -1,7 +1,7 @@
 ---
 name: i18n-check
 description: Analyze code for internationalization issues, understanding the UI context and user impact before flagging problems. Use when reviewing code for global readiness.
-allowed-tools: Read, Grep, Glob
+allowed-tools: Read, Grep, Glob, Bash
 user-invocable: true
 ---
 
@@ -23,7 +23,7 @@ The user may specify a file path, glob pattern, or directory. If not specified, 
 
 ## Config Integration
 
-Before starting, check for `.inclusion-config.md` in the project root.
+Before starting, follow the migration preflight in `references/config-migration.md`, then read `.assistant-config.md` from the project root.
 
 If it exists:
 1. **Read** scope decisions and acknowledged findings
@@ -32,10 +32,10 @@ If it exists:
    ## i18n Analysis: [path]
 
    **Skipped:** i18n checks disabled per project config (US-only)
-   To re-enable, update .inclusion-config.md
+   To re-enable, update .assistant-config.md
    ```
 3. **If in scope**: Skip acknowledged findings, note them in output
-4. **Note** at the top of output: "Config loaded: .inclusion-config.md"
+4. **Note** at the top of output: "Config loaded: .assistant-config.md"
 
 ## Process
 
