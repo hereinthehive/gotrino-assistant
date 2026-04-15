@@ -1,7 +1,7 @@
 {
   "name": "gotrino-assistant",
   "description": "A development assistant with skills for inclusion, triage, impact analysis, and more",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": {
     "name": "Dan Donald",
     "url": "https://hereinthehive.com"
@@ -9,5 +9,5 @@
   "homepage": "https://gotrino.com/resources/inclusion",
   "repository": "https://github.com/hereinthehive/inclusion",
   "license": "MIT",
-  "keywords": ["ethics", "inclusion", "accessibility", "i18n", "diversity", "a11y"]
+  "keywords": ["ethics", "inclusion", "accessibility", "i18n", "diversity", "a11y", "debt", "triage"]
 }
