@@ -46,6 +46,16 @@ It's not a linter. It's a second pair of eyes that sees your code from the persp
 | `/triage` | Assess a request, prioritise it, and draft a ready-to-file issue |
 | `/impact [path]` | Analyze change impact before making it |
 
+### Debt Analysis
+| Command | What it does |
+|---------|--------------|
+| `/code-debt [path]` | Find TODO markers, dead code, deprecated APIs, magic numbers, oversized units |
+| `/doc-debt [path]` | Find stale docs, missing public API docs, broken links, undocumented env vars |
+| `/test-debt [path]` | Find skipped tests, untested public APIs, flaky patterns |
+| `/dep-debt` | Find outdated, unused, or abandoned dependencies |
+| `/design-debt [path]` | Find inconsistent patterns, architectural drift, duplicated logic |
+| `/debt-audit [path]` | Run all debt dimensions and synthesize cross-cutting findings |
+
 ### Utilities
 | Command | What it does |
 |---------|--------------|
@@ -60,7 +70,7 @@ It's not a linter. It's a second pair of eyes that sees your code from the persp
 
 ## Configuration
 
-Run `/teach-charter` to create `.inclusion-config.md` in your project root. This stores:
+Run `/teach-charter` to create `.assistant-config.md` in your project root. This stores:
 
 - **Scope decisions**: What's in/out of scope (e.g., i18n for US-only products)
 - **Acknowledged findings**: Issues you've reviewed and accepted as intentional
@@ -69,6 +79,10 @@ Run `/teach-charter` to create `.inclusion-config.md` in your project root. This
 - **Task management**: Where you track work (Linear, GitHub Issues, Jira, local files, etc.) and whether it's accessible via tools
 
 Once configured, the plugin respects your decisions and won't nag you about acknowledged issues.
+
+### Upgrading from an earlier version
+
+The project config has been renamed from `.inclusion-config.md` to `.assistant-config.md` (v0.2+). If you're upgrading, the rename happens automatically the first time any skill runs — you'll see one line in the output: `Migrated: .inclusion-config.md → .assistant-config.md`. No manual action needed.
 
 ### Example Workflow
 
