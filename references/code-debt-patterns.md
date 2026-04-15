@@ -41,6 +41,19 @@ Overridable in `.assistant-config.md` under `Debt Scope`:
 | code-debt.max-nesting | 5 |
 ```
 
+## Rename / identifier drift
+
+When a project-wide rename is partially applied, the surviving mentions of the old identifier are debt.
+
+Signals:
+- An identifier (class, config file, env var, command) appearing in both old and new forms across the tree
+- Migration notes or release notes referencing a renamed thing while code still uses the old name
+- A recent commit with "rename X to Y" in the message, followed by lingering uses of X
+
+Scan the **whole tree** for this pattern, not just source. Config files, `.gitignore`, agent definitions, CI configs, templates, and docs all commonly hold the old name after a source-only rename. The blast radius is the point — a rename that stopped at the source boundary is the bug.
+
+When flagging, show both locations (old mention and where the new name lives) so the reviewer sees the drift, not just an orphan string.
+
 ## Magic numbers
 
 Numeric literals in conditions or calculations that aren't `0`, `1`, `-1`, `2`, or declared constants. Time/size values are the most common offenders.

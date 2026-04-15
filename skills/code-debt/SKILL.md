@@ -53,6 +53,8 @@ Read a representative file or two from the scope to understand the codebase's st
 
 Use Grep for each pattern category. See `references/code-debt-patterns.md` for the full list. Collect raw findings with `file:line` locations.
 
+For **rename/identifier drift**, scan the whole project tree — not just source. Config files, `.gitignore`, agent definitions, CI configs, and docs commonly hold the old name after a source-only rename. The point of this check is the blast radius.
+
 ### 3. Group by location
 
 Organize findings by module/directory, not by pattern type. A file with a TODO, a deprecated import, and a magic number is one location with three findings — not three scattered items.
